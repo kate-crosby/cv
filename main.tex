@@ -1,0 +1,285 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Template: Designer's CV
+%
+% Source: http://www.howtotex.com
+% 
+% Feel free to distribute this example, but please keep the referral
+% to HowToTeX.com
+% 
+% Date: March 2012
+%
+% Modified by Lim Lian Tze to support multiple pages using fix provided at
+% http://www.howtotex.com/templates/creating-a-designers-cv-in-latex/
+% Date: November 2014
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use writeLaTeX: 
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+% If you're new to LaTeX, the wikibook is a great place to start:
+% http://en.wikibooks.org/wiki/LaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document properties and packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,12pt,final]{memoir}
+
+% misc
+\renewcommand{\familydefault}{bch}	% font
+\pagestyle{empty}					% no pagenumbering
+\setlength{\parindent}{0pt}			% no paragraph indentation
+
+
+% required packages (add your own)
+%\usepackage{flowfram}										% column layout
+\usepackage[top=1.5cm,left=1.5cm,right=1.5cm,bottom=1.5cm]{geometry}% margins
+\usepackage{graphicx}										% figures
+\usepackage{url}											% URLs
+\usepackage[usenames,dvipsnames]{xcolor}					% color
+\usepackage{multicol}										% columns env.
+	\setlength{\multicolsep}{0pt}
+\usepackage{paralist}										% compact lists
+\usepackage{tikz}
+\usepackage[T1]{fontenc}
+\usepackage[urlcolor=MidnightBlue, colorlinks=true]{hyperref}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Create column layout
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% define length commands
+%\setlength{\vcolumnsep}{\baselineskip}
+%\setlength{\columnsep}{\vcolumnsep}
+
+% left frame
+%\newflowframe{0.2\textwidth}{\textheight}{0pt}{0pt}[left]
+%	\newlength{\LeftMainSep}
+%	\setlength{\LeftMainSep}{0.2\textwidth}
+%	\addtolength{\LeftMainSep}{1\columnsep}
+ 
+% small static frame for the vertical line
+%\newstaticframe{1.5pt}{\textheight}{\LeftMainSep}{0pt}
+ 
+% content of the static frame
+%\begin{staticcontents}{1}
+%\hfill
+%\tikz{%
+%	\draw[loosely dotted,color=RoyalBlue,line width=1.5pt,yshift=0]
+%	(0,0) -- (0,\textheight);}%
+%\hfill\mbox{}
+%\end{staticcontents}
+ 
+% right frame
+%\addtolength{\LeftMainSep}{1.5pt}
+%\addtolength{\LeftMainSep}{1\columnsep}
+%\newflowframe{0.7\textwidth}{\textheight}{\LeftMainSep}{0pt}[main01]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% define macros (for convience)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Sep}{\vspace{1.5em}}
+\newcommand{\SmallSep}{\vspace{0.5em}}
+
+\newenvironment{Contact Information}
+	{\ignorespaces\textbf{\color{MidnightBlue} Contact Information}}
+	{\Sep\ignorespacesafterend}
+	
+\newcommand{\CVSection}[1]
+	{\Large\textbf{#1}\par
+	\SmallSep\normalsize\normalfont}
+
+\newcommand{\CVItem}[1]
+	{\textbf{\color{MidnightBlue} #1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% All frames
+%%%%%%%%%%%%%%%%%%%%
+\Huge\bfseries {\color{MidnightBlue} Kate Crosby} \\
+
+\normalsize\normalfont
+
+% About me
+\begin{Contact Information}\\
+\textbf{Present post address: } 262 Robbins Hall, Department of Plant Sciences, University of California, Davis, California, USA, 95616 \textbf{email: }\href{kcrosby@ucdavis.edu}{kcrosby@ucdavis.edu}  \textbf{phone:} 530-564-9246\\ \textbf{github:} \href{https://github.com/kate-crosby}{kate-crosby}  \textbf{twitter:}\href{https://twitter.com/\_Kate_Crosby\_}{@\_Kate\_Crosby\_}  
+\end{Contact Information}
+
+% Education
+\CVSection{Education}
+\CVItem{2009 - 2014, PhD Biology - Ecological Genetics}\\
+Dalhousie University, Halifax, Nova Scotia, Canada\\
+Advisor: Dr. Robert G. Latta
+\SmallSep
+
+\CVItem{2004 - 2006, MSc Integrative Biology - Zoology}\\
+University of Guelph, Guelph, Ontario, Canada\\
+Advisor: Dr. Jinzhong Fu
+\SmallSep
+
+\CVItem{1999 - 2003, BSc Honors, Environmental Science \& Biology}\\
+Queen's University, Kingston Ontario, Canada
+\SmallSep
+
+\Sep
+
+% Experience
+\CVSection{Work Experience}
+\CVItem{Nov. 2014 - present}\\
+Postdoctoral Fellow, Ross-Ibarra Lab, Department of Plant Sciences, University of California, Davis, California
+\SmallSep
+
+\CVItem{June 2013 - June 2014}\\
+Data Manager (Part-time), Canadian Healthy Oceans Network (CHONe), Dalhousie University \& Memorial University.
+\SmallSep
+
+\CVItem{January 2013 - May 2013}\\
+Sessional faculty member, Department of Biology, Saint Mary\'s University, Halifax, Nova Scotia, Canada, course taught: Advanced Biostatistics
+\SmallSep
+
+\CVItem{January 2007 - May 2008}\\
+Research Technician, International Barcode of Life Initiative (iBOL), Biodiversity Institute of\\ Ontario (Guelph, ON)
+
+\Sep
+
+
+%Publications
+\CVSection{Peer-reviewed Publications}
+\textcolor{MidnightBlue}{\textbf{{Crosby K}}}, Stokes TO, Latta RG. Evolving California ecotypes of Avena barbata are derived from multiple introductions that show spatial mixing, but still substantial clinal structure. PeerJ, Vol 2 e633 \href{https://peerj.com/articles/633.pdf}{[pdf - Open Access]} \href{http://dx.doi.org/10.7717/peerj.633}{[url]}\\
+
+\textcolor{MidnightBlue}{\textbf{{Crosby K}}}, Latta RG. 2013. A test of the reproductive economy hypothesis in plants: more offspring per capita come from large (not small) parents in Avena barbata. \textit{Evolutionary Ecology} 27: 193-203 \href{https://www.researchgate.net/profile/Kate_Crosby/publication/257561503_A_test_of_the_reproductive_economy_hypothesis_in_plants_more_offspring_per_capita_come_from_large_\%28not_small\%29_parents_in_Avena_barbata/links/549893d20cf2519f5a1de721.pdf?origin=publication_detail}{[pdf]}\href{http://scholar.google.ca/scholar?oi=bibs&hl=en&cites=3740505222331803820&as_sdt=5}{[4 citations]}\\
+
+\textcolor{MidnightBlue}{\textbf{{Crosby K}}}, Smith DR. 2012. Does the mode of plastid genome inheritance influence plastid genome architecture?  \textit{PLoS ONE}, 7(5) e46260 \href{http://www.plosone.org/article/info\%3Adoi\%2F10.1371\%2Fjournal.pone.0046260}{[url - Open Access]} \href{http://scholar.google.ca/scholar?oi=bibs&hl=en&cites=8775816063343348897&as_sdt=5}{[4 citations]}\\
+
+Smith A, Bertrand C, \textcolor{MidnightBlue}{\textbf{{Crosby K}}},  Eveleigh, E., Fernandez-Triana, J., Fisher, B., Gibbs, J., Hajibabaei, M., Hallwachs, W., Hebert, P., Hind, K., Hrcek, J., Huang, D-W., Janda, M., Janzen, D., Li, Y., Longino, J., Miller, S., Packer, L., Quicke, D., Ratnasingham, S., Rodriguez, J., Rougerie, R., Shaw, M., Sheffield, C., Stahlhut, J., Stienke, D., Whitfield, J., Wood, M., Zhou, X.  2012. Wolbachia \& DNA Barcoding Insects: Patterns, Potential, \& Problems. \textit{PLoS ONE}, 7(5) e36514 \href{http://www.plosone.org/article/info\%3Adoi\%2F10.1371\%2Fjournal.pone.0036514#pone-0036514-g003}{[url - Open Accesss]}\href{http://scholar.google.ca/scholar?oi=bibs&hl=en&cites=16551803805181280857&as_sdt=5}{[27 citations]}
+\\
+
+Mora C, Treml EA, Roberts J, \textcolor{MidnightBlue}{\textbf{{Crosby K}}}, Roy D, Tittenor DP. 2012 High connectivity among habitats precludes the relationships between dispersal \& range size in tropical reef fishes. \textit{Ecography}, 35: 89-96 \href{http://www.researchgate.net/publication/227837454_High_connectivity_among_habitats_precludes_the_relationship_between_dispersal_and_range_size_in_tropical_reef_fishes/file/9c960528513ddcdf0e.pdf}{[pdf]}\href{http://scholar.google.com/scholar?oi=bibs&hl=en&cites=14910466386364676679&as_sdt=5}{[43 citations]}\\
+
+Smith DR, \textcolor{MidnightBlue}{\textbf{{Crosby K}}}, Lee RW. 2011. Correlation between Nuclear Plastid DNA Abundance \& Plastid Number Supports the Limited Transfer Window Hypothesis. \textit{Genome Biology and Evolution}, 3:365-371 \href{http://gbe.oxfordjournals.org/content/3/365.long}{[url - Open Access]} \href{http://scholar.google.ca/scholar?oi=bibs&hl=en&cites=9373596750792333707&as_sdt=5}{[31 citations]}\\ 
+
+Bi K, Deng D, \textcolor{MidnightBlue}{\textbf{{Crosby K}}}, Fu J. 2010. Characterization of microsatellite DNA markers in the Emei moustache toads (Leptobrachium boringii). \textit{Conservation Genetics}, 11: 1135-1137 \href{http://scholar.google.ca/scholar?oi=bibs&hl=en&cites=12162043784732384233&as_sdt=5}{[3 citations]}\\
+
+\textcolor{MidnightBlue}{\textbf{{Crosby K}}}, Licht LE, Fu J. 2009. The effect of habitat fragmentation on finescale population \\structure of wood frogs (Rana sylvatica). C\textit{onservation Genetics}, 10:1707-1718 \href{https://www.researchgate.net/profile/Kate_Crosby/publication/226176241_The_effect_of_habitat_fragmentation_on_finescale_population_structure_of_wood_frogs_\%28Rana_sylvatica\%29/links/54988b9f0cf2eeefc30f9a4b.pdf?origin=publication_detail}{[pdf]} \href{http://scholar.google.ca/scholar?oi=bibs&hl=en&cites=3898347670072226343&as_sdt=5}{[25 citations]}\\
+
+%Conference presentations and invited seminars
+\CVSection{Conference presentations \& invited seminars}
+Phylogeography \& contemporary evolution of \textit{Avena barbata} in California. Invited Seminar, Plant Sciences, UC Davis, 12/2014.
+\SmallSep
+
+CHONe's data management notes. Invited talk, Department of Fisheries \& Oceans Canada, Bedford Institute of Oceanography, Halifax, Nova Scotia, Canada, 06/2014 \& St. Andrews Biological Station 03/2014.
+\SmallSep
+
+Different mixtures of maternal haplotypes within populations in California demonstrate more polymorphism than expected in \textit{Avena barbata}. Talk at First Joint Congress on Evolutionary Biology, Ottawa, ON 07/2012.
+\SmallSep
+
+Phylogeography \& colonization history of the invasive Mediterranean annual grass Avena barbata in California. Oral presentation at the Meeting of the Society for the Study of Evolution (SSE), Norman, Oklahoma, 06/2011.
+\SmallSep
+
+Different landscape features \& spatial distance do not limit gene flow between populations of wood frogs. Oral presentation at the Meeting of the Society for the Study of Evolution (SSE), SUNY Stonybrook, 06/2006.
+\SmallSep
+
+Incorporating population genetics with ecological modeling: methods for obtaining resistance values in suburban populations of wood frogs. Oral presentation at the Midwest Ecology \& Evolution Conference, Carbondale, Illinois, USA, 03/2005.\\
+
+
+%Other teaching experience
+\CVSection{Other Teaching Experience}
+Dalhousie University (Halifax, NS)
+Department of Biology
+Teaching assistant \& lecturer (4 lectures)
+Fall semesters 2010 \& 2011
+Course: Analysis of Biological Data BIOL 4062/5062\\ 
+
+Laboratory Teaching Assistant (65 hrs/semester)
+Full academic year (2008-09, 2009-10)
+Course: Evolution 
+2nd-year undergraduate course, lab TA\\ 
+
+University of Guelph (Guelph, ON)
+Department of Integrative Biology 
+Teaching Assistant for the\\ following courses (laboratory \& lecture components):Humans in the Natural World (Fall 2004, Winter 2005, Fall 2006), Conservation Biology (Winter 2006), Ecological Lab \& Field Methods (Fall  2005), Mammalogy (Winter 2005)
+\Sep
+
+
+%Awards
+\CVSection{Awards}
+Dalhousie University Graduate Scholarship (2008 - 2013, \$19,000 CDN/year)\\
+University of Guelph Graduate Scholarship (2004 - 2006, \$17,000 CDN/year)\\
+University of Guelph tuition waiver (2004, \$2,000 CDN)\\
+Young Professionals International placement at the University of Genoa (2003 - 2004, \$11,000 CDN)\\
+
+
+% Skills
+\CVSection{Other Skills / Volunteerting}
+
+
+\CVItem{Programming languages}
+\begin{multicols}{3}
+\begin{compactitem}[\color{MidnightBlue}$\circ$]
+	\item R, intermediate / advanced
+    \item SQL, intermediate
+    \item CYPHER query language
+    \item Python
+    \item Unix \& Bash
+    \item Julia (beginner) 
+\end{compactitem}
+\end{multicols}
+\Sep 
+
+\CVItem{Languages spoken}
+\begin{multicols}{3}
+\begin{compactitem}[\color{MidnightBlue}$\circ$]
+	\item English, native speaker
+	\item French, fluent 
+    \item German, intermediate
+    \item Italian, intermediate
+\end{compactitem}
+\end{multicols}
+\Sep
+
+\CVItem{Professional Societies:}
+\begin{multicols}{3}
+\begin{compactitem}[\color{MidnightBlue}$\circ$]
+	\item Society for the Study of\\ Evolution
+	\item Canadian Society of Ecology \& Evolution
+    \item Canadian Botanical\\ Association
+\end{compactitem}
+\end{multicols}
+\Sep
+
+\CVItem{Reviewer for:}
+\begin{multicols}{2}
+\begin{compactitem}[\color{MidnightBlue}$\circ$]
+	\item Molecular Ecology (2)
+	\item G3: Genes, Genomes, Genetics (1)
+\end{compactitem}
+\end{multicols}
+\SmallSep
+
+
+% References
+\CVSection{References}
+Dr. Jeffrey Ross-Ibarra, Associate Professor, Dept. of Plant Sciences, \\
+University of California, Davis, California, USA, \textbf{email:} \href{rossibarra@ucdavis.edu}{rossibarra@ucdavis.edu}\\
+\\Dr. Robert G. Latta, Associate Professor, Dept. of Biology, Dalhousie University, Halifax, Nova Scotia, Canada, \textbf{email:} \href{robert.latta@dal.ca}{robert.latta@dal.ca}\\
+\\Dr. David R. Smith, Assistant Professor, Dept. of Biology, University of Western Ontario, London, Ontario, Canada, \textbf{email:} \href{dsmit242@uwo.ca}{dsmit242@uwo.ca}\\
+\\Dr. Jinzhong Fu, Associate Professor, Dept. of Integrative Biology, University of Guelph, Guelph, Ontario, Canada, \textbf{email:} \href{jfu@uoguelph.ca}{jfu@uoguelph.ca}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% End document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
